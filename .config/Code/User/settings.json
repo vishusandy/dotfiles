@@ -1,0 +1,694 @@
+{
+    //@@ Builtin Configuration Settings
+    //@@@ Editor Settings
+    "breadcrumbs.enabled": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "editor.find.autoFindInSelection": "multiline",
+    // "editor.fontFamily": "Iosevka Medium Extended', 'Pragmata Pro','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    // "editor.fontFamily": "'Jetbrains Mono', 'Victor Mono Medium', 'Pragmata Pro', 'monospace', 'Droid Sans Fallback'",
+    // "editor.fontFamily": "'Fira Mono Medium'",
+    // "editor.fontFamily": "'Cascadia Code'",
+    // "editor.fontFamily": "'Iosevka Extended'",
+    // "editor.fontFamily": "'Victor Mono Medium'",
+    "editor.fontSize": 12.5,
+    "editor.formatOnPaste": true,
+    "editor.insertSpaces": true,
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "all",
+    "editor.snippetSuggestions": "top",
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "editor.tabSize": 4,
+    "editor.trimAutoWhitespace": false,
+    "files.trimTrailingWhitespace": false,
+    "files.hotExit": "onExitAndWindowClose",
+    "files.insertFinalNewline": true,
+    "files.defaultLanguage": "$(activeEditorLanguage}",
+    "files.associations": {
+        "Containerfile": "docker",
+        "*.log": "shellscript"
+    },
+    "window.menuBarVisibility": "toggle",
+    "window.restoreFullscreen": true,
+    "workbench.editor.scrollToSwitchTabs": true,
+    "workbench.settings.openDefaultKeybindings": true,
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.visible": true,
+    "extensions.autoUpdate": true,
+    "telemetry.telemetryLevel": "off",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.detectIndentation": false,
+    "editor.stickyTabStops": true,
+    "editor.tabCompletion": "on",
+    "workbench.editor.closeEmptyGroups": true,
+    "html.format.indentHandlebars": true,
+    "terminal.integrated.cursorStyle": "underline",
+    "terminal.integrated.fontSize": 13, // Source: https://vscode.one/terminal-font-size/
+    "terminal.integrated.fontFamily": "Pragmata Pro", // Source: https://vscode.one/terminal-font-size/
+    "editor.cursorBlinking": "smooth",
+    "terminal.integrated.cursorBlinking": true,
+    "cSpell.language": "en,en-US",
+    "less.lint.float": "warning",
+    "css.lint.float": "warning",
+    "html.format.indentInnerHtml": true,
+    "html.format.endWithNewline": true,
+    "editor.hideCursorInOverviewRuler": true,
+    "scss.lint.float": "warning",
+    "explorer.openEditors.sortOrder": "alphabetical", // Or use editorOrder for the order the tabs are in
+    "window.restoreWindows": "preserve",
+    // "workbench.iconTheme": "Monokai Pro Icons",
+    "workbench.colorCustomizations": {
+        //:: https://code.visualstudio.com/api/references/theme-color
+        // "editor.foreground": "#F8F8F2",
+        // "editor.lineHighlightBackground": "#353535",
+        // "editorWhitespace.foreground": "#4d4d4d",
+        // "editorIndentGuide.background": "#222222",
+        "editor.findMatchHighlightForeground": "#FF8500",
+        // "editor.findMatchHighlightBackground": "#000000",
+        // "editorLineNumber.foreground": "#999999",
+        "statusBar.background": "#444444",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.border": "#713e97",
+        "statusBarItem.activeBackground": "#444444",
+        "statusBarItem.hoverBackground": "#444444",
+        "badge.foreground": "#ffff00",
+        "badge.background": "#99999933",
+        "input.background": "#44413b",
+        "input.border": "#666666",
+        "input.foreground": "#ffffff",
+        "input.placeholderForeground": "#d8168a",
+        "inputOption.activeBorder": "#8ceaf6",
+        "scrollbar.shadow": "#282828",
+        "scrollbarSlider.activeBackground": "#707070",
+        "scrollbarSlider.background": "#505050",
+        "scrollbarSlider.hoverBackground": "#808080",
+        "sideBar.background": "#262626",
+        "sideBar.foreground": "#dddddd",
+        "sideBar.border": "#5a3179",
+        "sideBarTitle.foreground": "#d08aff",
+        "sideBarSectionHeader.foreground": "#cd73ff",
+        "activityBar.border": "#5a3179",
+        "activityBarBadge.background": "#9c56d1",
+        "activityBarBadge.foreground": "#ffffff",
+        "activityBar.foreground": "#beb6a6",
+        "activityBar.background": "#222222",
+        "editorGroup.border": "#a39c8e",
+        "editorGroup.dropBackground": "#a39c8e66",
+        "editorGroupHeader.tabsBackground": "#353535",
+        "editorGroupHeader.tabsBorder": "#a39c8e",
+        "tab.activeBackground": "#696459",
+        "tab.activeForeground": "#ddd",
+        "tab.border": "#292723",
+        "tab.activeBorder": "#c0b6a2",
+        "tab.activeBorderTop": "#333",
+        "tab.unfocusedActiveBorderTop": "#000000",
+        "tab.inactiveBackground": "#504c44",
+        "tab.inactiveForeground": "#aaa",
+        "tab.unfocusedActiveForeground": "#ccc",
+        "tab.unfocusedInactiveForeground": "#999",
+        "tab.hoverBackground": "#3a3732",
+        "tab.unfocusedHoverBackground": "#24221f",
+        // "list.activeSelectionBackground": "#d8168a",
+        // "list.activeSelectionForeground": "#fff",
+        "list.focusBackground": "#7d469b",
+        "list.focusForeground": "#fff",
+        "list.hoverBackground": "#505050",
+        "list.hoverForeground": "#ffffff",
+        // "list.inactiveSelectionForeground": "#fff",
+        "editor.inactiveSelectionBackground": "#22aaff44",
+        "editor.selectionHighlightBackground": "#00659733",
+        // "editor.wordHighlightBorder": "#ff0000",
+        "progressBar.background": "#ff8500",
+        "editor.findMatchHighlightBackground": "#ff008cAA",
+        "editor.findMatchBackground": "#C937FF9A",
+        "editorLineNumber.foreground": "#ff7300AA",
+        "editorLineNumber.activeForeground": "#ff5100",
+        // "editor.background": "#26292C",
+        "editor.foreground": "#F8F8F2",
+        "editor.lineHighlightBackground": "#60606055",
+        "editorWhitespace.foreground": "#5d5d5d",
+        "editorIndentGuide.background": "#222222",
+        "editor.wordHighlightBorder": "#666",
+        "list.inactiveSelectionForeground": "#FF0095",
+        "list.inactiveSelectionBackground": "#353535",
+        "list.activeSelectionBackground": "#FF0095",
+        "list.activeSelectionForeground": "#26292C",
+        "editor.background": "#26292C",
+        "editorSuggestWidget.selectedBackground": "#29b6f6"
+    },
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true, // enable for all themes
+        "[Monokai Seti]": {
+            "rules": {
+                "comment": "#7c7b71",
+                "comment.documentation": "#529ca1"
+            }
+        }
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "entity.name.type",
+                "settings": {
+                    "foreground": "#09eefa"
+                }
+            },
+            {
+                "scope": "keyword.operator.key-value",
+                "settings": {
+                    "foreground": "#dddddd"
+                }
+            },
+            {
+                "scope": "variable.language",
+                "settings": {
+                    "foreground": "#f7c933",
+                    "fontStyle": ""
+                }
+            },
+            {
+                "scope": "variable.other",
+                "settings": {
+                    "foreground": "#e5e5e5"
+                }
+            },
+            {
+                "scope": "meta.attribute",
+                "settings": {
+                    "foreground": "#c92d2d"
+                }
+            },
+            {
+                "scope": "entity.name.function.macro",
+                "settings": {
+                    "foreground": "#FFDB00"
+                }
+            },
+            // {
+            //     "scope": "comment, punctuation.definition.comment",
+            //     "settings": {
+            //         "foreground": "#9c3774"
+            //     }
+            // },
+            // {
+            //     "scope": "comment.line.documentation.rust",
+            //     "settings": {
+            //         "foreground": "#ff0099"
+            //     }
+            // },
+            // //:: https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide
+        ]
+    },
+    //@@ --- Extension Settings ------------------------------------------------
+    "rust.build_on_save": true,
+    "rust.wait_to_build": 200,
+    "python.languageServer": "Default",
+    "[nginx]": {
+        "editor.defaultFormatter": "teclado.vscode-nginx-format"
+    },
+    "better-comments.highlightPlainText": true,
+    "better-comments.tags": [
+        {
+            "tag": "!!",
+            "color": "#ff790a",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "!-",
+            "color": "#ec540e",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "!_",
+            "color": "#ff590d",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "==",
+            "color": "#FF0055",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#343A41",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "??",
+            "color": "#00D0AF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#343A41",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "::",
+            "color": "#2DE2FF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#343A41",
+            "bold": false,
+            "italic": true
+        },
+        { // comments starting with TODO
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        { // comments that are a continuation of a previous TODO comment
+            "tag": "&",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        { // comments that are a continuation of a previous TODO comment
+            "tag": "||",
+            "color": "#E0E0E0",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        { // comments that are a continuation of a previous TODO comment
+            "tag": "TODO:",
+            "color": "#ff7300",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "**",
+            "color": "#00FFD7",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        // CUSTOM TAGS
+        //  Triangle Color Picker:
+        //    http://timbaumann.info/colortriangle/
+        {
+            "tag": "//",
+            "color": "#707070",
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "---",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": true
+        },
+        {
+            "tag": "++",
+            "color": "#62EA00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "@@@@",
+            "color": "#E5007D",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": true
+        },
+        {
+            "tag": "@@@",
+            "color": "#E5007D",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        { // This (the @@ tag) must be after the @@@ tag in order to funciton properly
+            "tag": "@@",
+            "color": "#ff008c",
+            "strikethrough": false,
+            "underline": true,
+            "backgroundColor": "transparent",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "!>>", // the settings for !>> have to come before !> otherwise it doesn't show both of them
+            "color": "#D3CDC1",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#33373b",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "\\>", // this evaluates to \> and not \\> due to character escapes
+            "color": "#f5ddb0",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#33373b",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "!>",
+            "color": "#CABEA7",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#33373b",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": ">>",
+            "color": "#CCC",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#33373b",
+            "bold": true,
+            "italic": false
+        },
+        {
+            "tag": "->>",
+            "color": "#F0F0F0",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "#33373b",
+            "bold": false,
+            "italic": true
+        },
+        {
+            "tag": ",,",
+            "color": "#30AFFF",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "$$",
+            "color": "#CA5DE5",
+            "backgroundColor": "#343A41",
+            "strikethrough": false,
+            "underline": false,
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "^^",
+            "color": "#FFED00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+        //
+        //
+        //      this is a normal comment (my theme uses #A39C8E as comment foreground)
+        // @@   heading
+        // @@@  sub-heading
+        // @@@@ sub-heading 2
+        // !!   this is important
+        // !_   this is an important [list] item header
+        // !-   this is an important [list] item
+        // ==   this is REALLY important
+        // **   this is cyan
+        // __   this is striked out
+        // //   this is old
+        // ??   this is a note or documention
+        // ::   https://this-is-a.url.com/
+        // ,,   I'm blue, da ba dee da ba daa
+        // ^^   this is yellow
+        // ..   this is kinda purple pink
+        // $$   this is purple and I love it
+        // \\         *To-do*
+        // <<         *To-do*
+        // +++  this line was added (diff)
+        // ---  this was removed (diff)
+        //TODO: this is a to-do list
+        // &    this is a todo list
+        //!>    important code snippet (like a snippet heading)
+        //!>>   important code snippet (like a snippet heading)
+        //\>    code snippet comment/description
+        //*>    code snippet comment/description
+        // >>   this-is-a.code(snippet)
+        // ->>  this is terminal output, or text  output from code
+        //TODO: Not finished yet
+        //& change colors:
+        // change ?? to orange (like !!), current cyan color is nice but not for reading documentation
+        //& add color for the following:
+        // ||   *To-do*
+        // \\   *To-do*
+        // <<   *To-do*
+        //& add the following items:
+        // ?_   documentation item, darker (or lighter) than ??
+        // !==  like important == but more important?
+        // *>   not sure what this is, or if it should be added
+        // >_   code output
+        // !=   (not sure)
+        //& make copies of:
+        // !>  as  |> 
+        // !>> as  |>>
+    ],
+    "shellcheck.enableQuickFix": true,
+    "shellcheck.run": "onSave",
+    "shellcheck.executablePath": "/usr/bin/shellcheck",
+    "shellcheck.exclude": [],
+    "shellcheck.ignoreFileSchemes": [
+        "git",
+        "gitfs"
+    ],
+    "shellcheck.disableVersionCheck": true,
+    "shellcheck.ignorePatterns": {
+        "**/*.zsh": true,
+        "**/zshrc": true,
+        "**/*.zprofile": true,
+        "**/zprofile": true,
+        "**/*.zlogin": true,
+        "**/zlogin": true,
+        "**/*.zlogout": true,
+        "**/zlogout": true,
+        "**/*.zshenv": true,
+        "**/zshenv": true,
+        "**/*.zsh-theme": true,
+        "**/.logs/*.txt": true,
+        "**/.logs/*.bak": true,
+        "**/.logs/*.log": true
+    },
+    "shellcheck.customArgs": [
+        "-x"
+    ],
+    // "terminal.integrated.shell.linux": "/usr/bin/bash",
+    "terminal.integrated.allowChords": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "workbench.settings.editor": "json",
+    "cSpell.enableFiletypes": [
+        "!yaml"
+    ],
+    // "workbench.colorTheme": "Andromeda",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "rust.clippy_preference": "on",
+    "rust.all_targets": false,
+    "rust.cfg_test": true,
+    "editor.bracketPairColorization.enabled": true,
+    "workbench.colorTheme": "Monokai Seti",
+    "leetcode.defaultLanguage": "rust",
+    "leetcode.workspaceFolder": "/home/andrew/Code/leetcode",
+    "leetcode.filePath": {
+        "default": {
+            "folder": "problems",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+        "rust": {
+            "folder": "problems",
+            "filename": "prob_${id}_${snake_case_name}.${ext}",
+        }
+    },
+    "leetcode.showDescription": "Both",
+    "leetcode.editor.shortcuts": [
+        "description",
+        "submit",
+        "test"
+    ],
+    "markdown.preview.lineHeight": 1.5,
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.hint.configWebviewMarkdown": false,
+    "editor.formatOnSave": true,
+    // https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+    // "sourcepawn.formatterSettings": [
+    //     "BasedOnStyle: GNU",
+    // ],
+    "sourcepawn.formatterSettings": [
+        // "BasedOnStyle: Google",
+        "BasedOnStyle: WebKit",
+        "AlignArrayOfStructures: Left",
+        "AlignConsecutiveAssignments: AcrossComments",
+        "AlignConsecutiveBitFields: AcrossComments",
+        "AlignConsecutiveDeclarations: AcrossComments",
+        "AlignConsecutiveMacros: AcrossComments",
+        "AlignOperands: AlignAfterOperator",
+        "AllowShortBlocksOnASingleLine: Always",
+        "AllowShortCaseLabelsOnASingleLine: true",
+        "AllowShortFunctionsOnASingleLine: Inline",
+        "AllowShortIfStatementsOnASingleLine: AllIfsAndElse",
+        "AllowShortLambdasOnASingleLine: All",
+        "AllowShortLoopsOnASingleLine: true",
+        "BreakBeforeBinaryOperators: NonAssignment",
+        "BreakBeforeBraces: Custom",
+        "BraceWrapping: { AfterClass: true",
+        "AfterCaseLabel: true",
+        "AfterControlStatement: Always",
+        "AfterEnum: true",
+        "AfterFunction: true",
+        "AfterNamespace: true",
+        "AfterObjCDeclaration: false",
+        "AfterStruct: true",
+        "AfterUnion: true",
+        "AfterExternBlock: true",
+        "BeforeCatch: true",
+        "BeforeElse: true",
+        "BeforeLambdaBody: true",
+        "BeforeWhile: true",
+        "IndentBraces: false",
+        "SplitEmptyFunction: false",
+        "SplitEmptyRecord: false",
+        "SplitEmptyNamespace: false }",
+        "BreakBeforeConceptDeclarations: false",
+        "BreakStringLiterals: false",
+        "BreakBeforeTernaryOperators: true",
+        "BreakConstructorInitializers: AfterColon",
+        "BreakInheritanceList: AfterComma",
+        "CommentPragmas: '@'",
+        "ReflowComments: true",
+        "MaxEmptyLinesToKeep: 1",
+        "NamespaceIndentation: All",
+        "DeriveLineEnding: true",
+        "DerivePointerAlignment: false",
+        "EmptyLineBeforeAccessModifier: LogicalBlock",
+        "FixNamespaceComments: true",
+        "CompactNamespaces: false",
+        "ConstructorInitializerIndentWidth: ${TabSize}",
+        "ContinuationIndentWidth: ${TabSize}",
+        "Cpp11BracedListStyle: false",
+        "SortIncludes: CaseInsensitive",
+        "IncludeBlocks: Preserve",
+        "SpaceAfterCStyleCast: false",
+        "SpaceAfterLogicalNot: false",
+        "SpaceBeforeAssignmentOperators: true",
+        "SpaceBeforeCaseColon: false",
+        "SpaceBeforeCpp11BracedList: false",
+        "SpaceInEmptyBlock: false",
+        "SpacesInCStyleCastParentheses: false",
+        "SpaceInEmptyParentheses: false",
+        "SpacesInConditionalStatement: false",
+        "SpacesInContainerLiterals: true",
+        "SpacesInParentheses: false",
+        "SpacesInSquareBrackets: false",
+        "SpaceBeforeRangeBasedForLoopColon: true",
+        "SpaceBeforeSquareBrackets: false",
+        "SpaceBeforeCtorInitializerColon: true",
+        "SpaceBeforeInheritanceColon: false",
+        "SpaceBeforeParens: ControlStatementsExceptControlMacros",
+        "IndentPPDirectives: BeforeHash",
+        "IndentAccessModifiers: false",
+        "IndentCaseBlocks: false",
+        "IndentCaseLabels: true",
+        "ColumnLimit: 120",
+        "IndentRequires: true",
+        "IndentExternBlock: Indent",
+        "IndentGotoLabels: false",
+        "IndentWidth: ${TabSize}",
+        "IndentWrappedFunctionNames: false",
+        "Language: Cpp",
+        "SpacesBeforeTrailingComments: ${TabSize}",
+        "TabWidth: ${TabSize}",
+        "UseTab: Never"
+    ],
+    "[sourcepawn]": {
+        "editor.formatOnSave": false
+    },
+    "sourcepawn.MainPathCompilation": false,
+    "sourcepawn.SourcemodHome": "/home/andrew/sourcemodAPI/addons/sourcemod/scripting/include",
+    "sourcepawn.SpcompPath": "/home/andrew/sourcemodAPI/addons/sourcemod/scripting/spcomp",
+    "sourcepawn.optionalIncludeDirsPaths": [
+        // "/home/andrew/Code/CSS/server/cstrike/addons/sourcemod/scripting/include"
+        "/home/andrew/CSS/cstrike/addons/sourcemod/scripting/include"
+    ],
+    // "sourcepawn.outputDirectoryPath": "/home/andrew/Code/CSS/server/cstrike/addons/sourcemod/plugins/",
+    "sourcepawn.outputDirectoryPath": "/home/andrew/CSS/cstrike/addons/sourcemod/plugins/",
+    "[valve-cfg]": {
+        "editor.formatOnSave": false
+    },
+    "blender.scripts.directories": [
+        {
+            "path": "/home/andrew/Code/Python/blender/procgen",
+            "name": ""
+        }
+    ],
+    "blender.executables": [
+        {
+            "path": "/usr/bin/blender",
+            "name": "",
+            "isDebug": false
+        }
+    ],
+    "blender.allowModifyExternalPython": true,
+    "[valve-ini]": {
+        "editor.formatOnSave": false
+    },
+    // "php.validate.executablePath": "/usr/bin/php",
+    "editor.guides.indentation": true,
+    "editor.lineHeight": 1.9,
+    "files.autoSave": "afterDelay",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.editor.untitled.labelFormat": "name",
+    "workbench.editor.wrapTabs": true,
+    "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
+    "[html]": {
+        "editor.formatOnSave": false
+    },
+    "rust-analyzer.debug.openDebugPane": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "rust-analyzer.inlayHints.reborrowHints.enable": "always",
+    "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "skip_trivial",
+    "rust-analyzer.checkOnSave.command": "clippy",
+    "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
+    "rust-analyzer.inlayHints.bindingModeHints.enable": true,
+    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "with_block"
+}

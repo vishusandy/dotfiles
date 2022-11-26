@@ -1,0 +1,77 @@
+
+# For Nano Shortcuts See:
+#  https://www.nano-editor.org/dist/latest/cheatsheet.html
+#  https://gist.github.com/franz-josef-kaiser/43c045190356b0d5778c
+
+set atblanks
+set autoindent
+set constantshow
+set jumpyscrolling
+set historylog
+set linenumbers
+set minibar
+set mouse
+set positionlog
+set regexp
+set smarthome
+set softwrap
+# set suspend
+set tabsize 2
+set tabstospaces
+
+
+#--BINDINGS--
+# Modifiers Keys:
+#   ^ = ctrl
+#   M = alt
+#   Sh-M = shift+alt
+#
+bind Sh-M-C location main
+bind Sh-M-V pagedown main
+bind Sh-M-T execute main
+
+
+#--COLORS--
+# set OPTION COLOR
+#   [bold,][italic,]fg,bg
+# Colors:
+#   Light Prefixable Colors
+#     [light]red,green,blue,magenta,yellow,cyan,white,black
+#   Non-Prefixable Colors
+#     pink, purple, mauve, lagoon, mint, lime, peach, orange, latte,  and  normal
+# set errorcolor
+# set funcitoncolor
+# set keycolor  #[bold,][italic,]fg,bg - shortcut key display at bottom
+# set minicolor
+# set numbercolor
+# set promptcolor
+# set scrollercolor
+# set selectedcolor
+# set spotlightcolor #color to highlight a search match
+# set statuscolor
+# set stripecolor #color for the vertical guide stripe
+# set titlecolor
+#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

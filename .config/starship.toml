@@ -1,0 +1,271 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+\
+[$character](bg:#de0055)\
+([$jobs](bg:#de0055))\
+($sudo)\
+\
+$username\
+$directory\
+[](fg:#8d02b8 bg:#de0055)\
+\
+\
+\
+(\
+[](fg:#de0055 bg:#0da68a)\
+$git_status\
+$git_branch\
+[](bg:#de0055 fg:#0da68a)\
+)\
+\
+\
+\
+(\
+$c\
+$cobol\
+$crystal\
+$dart\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$haskell\
+$java\
+$julia\
+$kotlin\
+$lua\
+$nodejs\
+$nim\
+$ocaml\
+$perl\
+$php\
+$python\
+$red\
+$rlang\
+$ruby\
+$rust\
+$scala\
+$swift\
+$vlang\
+$zig\
+)\
+\
+\
+[](fg:#de0055)\
+\
+"""
+
+#
+
+# Disable the blank line at the start of the prompt
+add_newline = true
+
+
+[sudo]
+symbol = "⭐"
+style = "bg:#de0055"
+format = "[$symbol]($style)"
+disabled = false
+
+[character]
+success_symbol = " "
+error_symbol = "[ ✗](bold fg:black bg:#fa1419)[](fg:#fa1419 bg:#de0055)"
+format = "$symbol"
+
+[username]
+show_always = false
+style_user = "#8d02b8"
+style_root = "#e35102 bold"
+format = '$sudo[](fg:#de0055 bg:$style)[$user ](bg:$style)[](fg:$style bg:#de0055)'
+
+[directory]
+style = "bg:#8d02b8"
+format = "[](fg:#de0055 $style)[$path ]($style)"
+truncation_length = 2
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Code" = "💻"
+"Documents" = "📂"
+"Downloads" = "📥"
+"Music" = "🎧"
+"Pictures" = "📷"
+"Public" = "👤"
+"Templates" = "📐"
+"Videos" = "🎬"
+"~" = "🏠"
+
+[jobs]
+symbol = "📋"
+number_threshold = 2
+symbol_threshold = 1
+style = "bg:#666666"
+format = "[](fg:#de0055 bg:#666666)[$symbol$number]($style)[](fg:#666666 bg:#de0055)"
+
+
+[git_branch]
+symbol = ""
+style = "bg:#0da68a"
+format = '[$symbol](fg:#2c5221 $style)[$branch]($style)'
+disabled = true
+
+[git_status]
+style = "bg:#0da68a"
+conflicted = "😓 "
+modified = "[ ](fg:#2c5221 bg:#0da68a)"
+stashed = "[ $count ](fg:#2c5221 bg:#0da68a)"
+format = '[$all_status$ahead_behind]($style)'
+disabled = true
+
+[c]
+symbol = "  "
+style = "bold fg:#3486eb bg:#222222"
+format = '[](fg:#de0055 bg:#222222)[$symbol]($style)[](fg:#222222 bg:#de0055)'
+
+[cobol]
+symbol = " ⚙️ "
+style = "#168fc7"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[crystal]
+symbol = "  "
+style = "bold #cccccc"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+
+[dart]
+symbol = "  "
+style = "bold #41c4ff"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[dotnet]
+symbol = ".net" # 
+style = "bold fg:#2fb000 bg:#222222"
+format = "[](fg:#de0055 bg:#222222)[$symbol($version )(🎯 $tfm )]($style)[](fg:#222222 bg:#de0055)"
+heuristic = true
+
+[elixir]
+symbol = "  "
+style = "bold #7921d1"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[elm]
+symbol = "elm" # 
+style = "bold #1293d8"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[erlang]
+symbol = "  "
+style = "#de0055"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[golang]
+symbol = "  "
+style = "bold #8cd2e2"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[haskell]
+symbol = "  " # λ
+style = "bold #a402b3"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[java]
+symbol = "  "
+style = "bold #b38346"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[julia]
+symbol = "  "
+style = "bold #4063d8"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[kotlin]
+symbol = " 🅺 "
+style = "bold blue"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[lua]
+symbol = "  "
+style = "bold #354dfc"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[nodejs]
+symbol = "  "
+style = "bold #2ca600"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[nim]
+symbol = "  "
+style = "#f0bc05"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[ocaml]
+symbol = " 🐫 "
+style = "#2ca600"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[perl]
+symbol = " 🐪 "
+style = "#7705f0"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+
+[php]
+symbol = " 🐘 "
+style = "#7705f0"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[python]
+symbol = "  "
+style = "bold #ffd241"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[red]
+symbol = " 🔺 "
+style = "bold #a51601"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[rlang]
+symbol = " R "
+style = "bold #bf1a02"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+
+[ruby]
+symbol = "  "
+style = "bold #a51601"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[rust]
+symbol = " 🦀 "
+style = "#823026"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+#format = '[](fg:#de0055 bg:$style)[$symbol](bg:$style)[](fg:$style bg:#de0055)'
+
+[scala]
+symbol = "  "
+style = "#e52e2a"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[swift]
+symbol = "  "
+style = "#f05138"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[vlang]
+symbol = " v "
+style = "#3075d1"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[zig]
+symbol = " ↯ "
+style = "#f7a41d"
+format = '[](fg:#de0055 bg:#222222)[$symbol](fg:$style bg:#222222)[](fg:#222222 bg:#de0055)'
+
+[time]
+disabled = true
+time_format = "%R"             # Hour:Minute Format
+style = "bg:#33658A"
+format = '[ ♥ $time ]($style)'
