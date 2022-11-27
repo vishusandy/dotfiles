@@ -2,21 +2,6 @@
 
 #.bashrc
 
-case $- in
-*i*) [[ -e ~/bin/shell-logging.sh ]] && . ~/bin/shell-logging.sh ;;
-*) ;;
-esac
-# [[ -e /config/scripts/shell-logging.sh ]] && . /config/scripts/shell-logging.sh
-
-# don't put duplicate lines or lines starting with space in the history.
-#   HISTCONTROL=ignoredups:ignorespace
-#   or HISTCONTROL=ignoreboth
-# See bash(1) for more options
-HISTCONTROL=ignoredups
-shopt -s histappend
-HISTSIZE=-1
-HISTFILESIZE=-1
-
 # Be explicit about what is enabled and disabled
 # disabled options:
 shopt -u assoc_expand_once cdable_vars checkhash checkjobs compat31 compat32 compat40 compat41 compat42 compat43 compat44 direxpand execfail extdebug failglob gnu_errfmt histreedit histverify hostcomplete huponexit inherit_errexit lastpipe localvar_inherit localvar_unset login_shell mailwarn no_empty_cmd_completion nocasematch restricted_shell shift_verbose
@@ -66,10 +51,10 @@ fi
 # ------------------------------------------------------------------------------
 # if ! shopt -q login_shell ; then # We're not a login shell
 if shopt -q login_shell; then # In a login shell, so return/exit
-    echo 'Login shell, exiting .bashrc'
+    # echo 'Login shell, exiting .bashrc'
     return
 elif [[ ! $- == *i* ]]; then # In a non-interactive shell, so return/exit
-    echo 'Non-interactive shell, exiting .bashrc'
+    # echo 'Non-interactive shell, exiting .bashrc'
     return
 fi
 
@@ -96,11 +81,11 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 
 
 # Cargo
-if [[ -f "$HOME/.cargo/env" ]]; then
-    . "$HOME/.cargo/env"
-fi
+#if [[ -f "$HOME/.cargo/env" ]]; then
+#    . "$HOME/.cargo/env"
+#fi
 
-eval "$(starship init bash)"
+# eval "$(starship init bash)"
 
-. /usr/share/fzf/shell/key-bindings.bash
+# . /usr/share/fzf/shell/key-bindings.bash
 
