@@ -1,0 +1,27 @@
+
+
+https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Redirections-1
+
+https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Duplicating-File-Descriptors
+
+
+
+https://unix.stackexchange.com/a/159514
+
+>& : (per POSIX spec) when surrounded by digits (1>&2) or - on the right side (1>&-) either redirects only one file descriptor or closes it (>&-).
+
+A >& followed by a file descriptor number is a portable way to redirect a file descriptor, and >&- is a portable way to close a file descriptor.
+
+If the right side of this redirection is a file please read the next entry.
+
+>&, &>, >>& and &>> : (read above also) Redirect both standard error and standard output, replacing or appending, respectively.
+
+command &> out.txt
+
+Both standard error and standard output of command will be saved in out.txt, overwriting its contents or creating it if it doesn't exist.
+
+command &>> out.txt
+
+As above, except that if out.txt exists, the output and error of command will be appended to it.
+
+The &> variant originates in bash, while the >& variant comes from csh (decades earlier). They both conflict with other POSIX shell operators and should not be used in portable sh scripts.

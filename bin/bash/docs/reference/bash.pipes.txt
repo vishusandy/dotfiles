@@ -1,0 +1,8 @@
+
+Pipes, the | operator, sends stdout from one command as stdin to another command
+cat some_file.txt > wc -l
+
+|& sends both stdout and stderr of one command as input to another
+
+https://unix.stackexchange.com/questions/159513/what-are-the-shells-control-and-redirection-operators
+

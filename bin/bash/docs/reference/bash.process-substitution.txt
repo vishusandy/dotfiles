@@ -1,0 +1,24 @@
+
+https://tldp.org/LDP/abs/html/process-sub.html
+https://www.linuxjournal.com/content/shell-process-redirection
+
+Process Substitution
+  <(command_list)
+    Sends stdout from command_list into the stdin of another command
+      Example: cat <(date)
+        Sends stdout of date as stdin to cat
+  >(command_list)  
+    Takes 
+ Process substitution does not run in a subshell, unlike piping with |
+   See: https://tldp.org/LDP/abs/html/process-sub.html#WRPS
+
+
+Process substitution works by storing the result of <(cmd) or >(cmd) in /proc/self/fd/ and passes the filename to the command
+https://unix.stackexchange.com/a/17117
+
+See also: named pipes
+  https://linuxconfig.org/introduction-to-named-pipes-on-bash-shell
+  https://stackoverflow.com/questions/4113986/example-of-using-named-pipes-in-linux-shell-bash
+  
+  
+

@@ -1,0 +1,15 @@
+
+# Redirect stdout of command to stderr
+&>2
+https://tldp.org/LDP/abs/html/special-chars.html#REDIROUTERROR2
+  command >&2
+
+# NOT TO BE CONFUSED WITH &>
+#   The &> operator redirects both stdout and stderr of command to filename
+# https://tldp.org/LDP/abs/html/special-chars.html#REDIROUTERROR
+
+
+See also:
+  https://tldp.org/LDP/abs/html/io-redirection.html#IOREDIRREF
+
+

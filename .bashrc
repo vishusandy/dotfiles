@@ -3,9 +3,9 @@
 #.bashrc
 
 # Be explicit about what is enabled and disabled
-# disabled options:
+# disable:
 shopt -u assoc_expand_once cdable_vars checkhash checkjobs compat31 compat32 compat40 compat41 compat42 compat43 compat44 direxpand execfail extdebug failglob gnu_errfmt histreedit histverify hostcomplete huponexit inherit_errexit lastpipe localvar_inherit localvar_unset login_shell mailwarn no_empty_cmd_completion nocasematch restricted_shell shift_verbose
-# enabled options:
+# enable:
 shopt -s autocd cdspell checkwinsize cmdhist complete_fullquote dirspell dotglob expand_aliases extglob extquote force_fignore globasciiranges globstar histappend interactive_comments lithist nocaseglob nullglob progcomp progcomp_alias promptvars sourcepath xpg_echo
 
 # Source global definitions
@@ -16,7 +16,23 @@ fi
 # User specific environment
 #shellcheck disable=2076  #not checking against a regular expression so this is fine
 if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+    if [ -d "$HOME/bin/scripts" ]; then
+        PATH="$HOME/bin/scripts:$PATH"
+    fi
+
+    if [ -d "$HOME/bin/lib" ]; then
+        PATH="$HOME/bin/lib:$PATH"
+    fi
+
+    if [ -d "$HOME/bin/bash" ]; then
+        PATH="$HOME/bin/bash:$PATH"
+    fi
+
+    if [ -d "$HOME/bin" ]; then
+        PATH="$HOME/bin:$PATH"
+    fi
+
+    PATH="$HOME/.local/bin:$PATH"
 fi
 export PATH
 
@@ -78,14 +94,3 @@ alias l='ls -CF'
 
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-
-# Cargo
-#if [[ -f "$HOME/.cargo/env" ]]; then
-#    . "$HOME/.cargo/env"
-#fi
-
-# eval "$(starship init bash)"
-
-# . /usr/share/fzf/shell/key-bindings.bash
-

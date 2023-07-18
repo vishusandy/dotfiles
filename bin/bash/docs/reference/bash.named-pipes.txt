@@ -1,0 +1,10 @@
+
+Named pipes allow input AND output to be sent back and forth between commands
+  cmd1 < namedpipe > cmd2
+
+https://linuxconfig.org/introduction-to-named-pipes-on-bash-shell
+https://stackoverflow.com/questions/4113986/example-of-using-named-pipes-in-linux-shell-bash
+https://www.networkworld.com/article/3251853/why-use-named-pipes-on-linux.html
+
+See also: mkfifi
+  https://www.howtoforge.com/linux-mkfifo-command/

@@ -1,0 +1,84 @@
+NAME
+SYNOPSIS
+COPYRIGHT
+DESCRIPTION
+OPTIONS
+ARGUMENTS
+INVOCATION
+DEFINITIONS
+RESERVED WORDS
+SHELL GRAMMER
+Simple Commands
+Pipeplines
+Lists
+Compound Commands
+Expressions may be combined using the following operators
+for name
+for name [ [ in
+for ((
+select name [ in word
+case word in [ [
+if list; then list; [
+while list-1; do
+until list-1; do
+Coprocesses
+Shell Function Definitions
+COMMENTS
+QUOTING
+PARAMETERS
+Positional Parameters
+Special Parameters
+Shell Variables
+The following variables are set by the shell
+The following variables are used by the shell
+Arrays
+EXPANSION
+Brace Expansion
+Tilde Expansion
+# Parameter Expansion
+Command Substitution
+Arithmetic Expansion
+Process Substitution
+Word Splitting
+Pathname Expansion
+Pattern Matching
+Quote Removal
+REDIRECTION
+Redirecting Input
+Redirecting Output
+Appending Redirected Output
+Redirecting Standard Output and Standard Error
+Appending Standard Output and Standard Error
+Here Documents
+Here Strings
+Duplicating File Descriptors
+Moving File Descriptors
+Opening File Descriptors for Reading and Writing
+ALIASES
+FUNCTIONS
+ARITHMETIC EVALUATION
+CONDITIONAL EXPRESSIONS
+SIMPLE COMMAND EXPANSION
+COMMAND EXECUTION
+COMMAND EXECUTION ENVIRONMENT
+ENVIRONMENT
+EXIT STATUS
+SIGNALS
+JOB CONTROL
+PROMPTING
+READLINE
+Programmable Completion
+HISTORY
+HISTORY EXPANSION
+Event Designators
+Word Designators
+Modifiers
+SHELL BUILTIN COMMANDS
+RESTRICTED SHELL
+SEE ALSO
+FILES
+
+AUTHORS
+BUG REPORTS
+BUGS
+

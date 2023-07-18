@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 alias ls="ls --color=auto --group-directories-first -A"
 
 # Shell Builtins
@@ -65,9 +67,6 @@ cdl() {
 #
 # pass args to cd:
 # mkcd newdir -P      this will not follow symbolic links; resolves symlinks in DIR before processing instances of '..'
-#
-#
-#
 mkcd() {
     # no existing directory specified
     if [ -z "$1" ] && [ ! -e "$1" ]; then

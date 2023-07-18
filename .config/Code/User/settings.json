@@ -2,7 +2,7 @@
     //@@ Builtin Configuration Settings
     //@@@ Editor Settings
     "breadcrumbs.enabled": true,
-    "editor.cursorSmoothCaretAnimation": true,
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.find.autoFindInSelection": "multiline",
     // "editor.fontFamily": "Iosevka Medium Extended', 'Pragmata Pro','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
     // "editor.fontFamily": "'Jetbrains Mono', 'Victor Mono Medium', 'Pragmata Pro', 'monospace', 'Droid Sans Fallback'",
@@ -10,6 +10,12 @@
     // "editor.fontFamily": "'Cascadia Code'",
     // "editor.fontFamily": "'Iosevka Extended'",
     // "editor.fontFamily": "'Victor Mono Medium'",
+    "editor.fontFamily": "'Cousine Nerd Font Mono'",
+    // "editor.fontFamily": "' Nerd Font Mono'",
+    // "editor.fontFamily": "' Nerd Font Mono'",
+    // "editor.fontFamily": "' Nerd Font Mono'",
+    // "editor.fontFamily": "' Nerd Font Mono'",
+    // "editor.fontFamily": "' Nerd Font Mono'",
     "editor.fontSize": 12.5,
     "editor.formatOnPaste": true,
     "editor.insertSpaces": true,
@@ -527,27 +533,7 @@
     "rust.cfg_test": true,
     "editor.bracketPairColorization.enabled": true,
     "workbench.colorTheme": "Monokai Seti",
-    "leetcode.defaultLanguage": "rust",
-    "leetcode.workspaceFolder": "/home/andrew/Code/leetcode",
-    "leetcode.filePath": {
-        "default": {
-            "folder": "problems",
-            "filename": "${id}.${kebab-case-name}.${ext}"
-        },
-        "rust": {
-            "folder": "problems",
-            "filename": "prob_${id}_${snake_case_name}.${ext}",
-        }
-    },
-    "leetcode.showDescription": "Both",
-    "leetcode.editor.shortcuts": [
-        "description",
-        "submit",
-        "test"
-    ],
     "markdown.preview.lineHeight": 1.5,
-    "leetcode.hint.commandShortcut": false,
-    "leetcode.hint.configWebviewMarkdown": false,
     "editor.formatOnSave": true,
     // https://clang.llvm.org/docs/ClangFormatStyleOptions.html
     // "sourcepawn.formatterSettings": [
@@ -555,89 +541,6 @@
     // ],
     "sourcepawn.formatterSettings": [
         // "BasedOnStyle: Google",
-        "BasedOnStyle: WebKit",
-        "AlignArrayOfStructures: Left",
-        "AlignConsecutiveAssignments: AcrossComments",
-        "AlignConsecutiveBitFields: AcrossComments",
-        "AlignConsecutiveDeclarations: AcrossComments",
-        "AlignConsecutiveMacros: AcrossComments",
-        "AlignOperands: AlignAfterOperator",
-        "AllowShortBlocksOnASingleLine: Always",
-        "AllowShortCaseLabelsOnASingleLine: true",
-        "AllowShortFunctionsOnASingleLine: Inline",
-        "AllowShortIfStatementsOnASingleLine: AllIfsAndElse",
-        "AllowShortLambdasOnASingleLine: All",
-        "AllowShortLoopsOnASingleLine: true",
-        "BreakBeforeBinaryOperators: NonAssignment",
-        "BreakBeforeBraces: Custom",
-        "BraceWrapping: { AfterClass: true",
-        "AfterCaseLabel: true",
-        "AfterControlStatement: Always",
-        "AfterEnum: true",
-        "AfterFunction: true",
-        "AfterNamespace: true",
-        "AfterObjCDeclaration: false",
-        "AfterStruct: true",
-        "AfterUnion: true",
-        "AfterExternBlock: true",
-        "BeforeCatch: true",
-        "BeforeElse: true",
-        "BeforeLambdaBody: true",
-        "BeforeWhile: true",
-        "IndentBraces: false",
-        "SplitEmptyFunction: false",
-        "SplitEmptyRecord: false",
-        "SplitEmptyNamespace: false }",
-        "BreakBeforeConceptDeclarations: false",
-        "BreakStringLiterals: false",
-        "BreakBeforeTernaryOperators: true",
-        "BreakConstructorInitializers: AfterColon",
-        "BreakInheritanceList: AfterComma",
-        "CommentPragmas: '@'",
-        "ReflowComments: true",
-        "MaxEmptyLinesToKeep: 1",
-        "NamespaceIndentation: All",
-        "DeriveLineEnding: true",
-        "DerivePointerAlignment: false",
-        "EmptyLineBeforeAccessModifier: LogicalBlock",
-        "FixNamespaceComments: true",
-        "CompactNamespaces: false",
-        "ConstructorInitializerIndentWidth: ${TabSize}",
-        "ContinuationIndentWidth: ${TabSize}",
-        "Cpp11BracedListStyle: false",
-        "SortIncludes: CaseInsensitive",
-        "IncludeBlocks: Preserve",
-        "SpaceAfterCStyleCast: false",
-        "SpaceAfterLogicalNot: false",
-        "SpaceBeforeAssignmentOperators: true",
-        "SpaceBeforeCaseColon: false",
-        "SpaceBeforeCpp11BracedList: false",
-        "SpaceInEmptyBlock: false",
-        "SpacesInCStyleCastParentheses: false",
-        "SpaceInEmptyParentheses: false",
-        "SpacesInConditionalStatement: false",
-        "SpacesInContainerLiterals: true",
-        "SpacesInParentheses: false",
-        "SpacesInSquareBrackets: false",
-        "SpaceBeforeRangeBasedForLoopColon: true",
-        "SpaceBeforeSquareBrackets: false",
-        "SpaceBeforeCtorInitializerColon: true",
-        "SpaceBeforeInheritanceColon: false",
-        "SpaceBeforeParens: ControlStatementsExceptControlMacros",
-        "IndentPPDirectives: BeforeHash",
-        "IndentAccessModifiers: false",
-        "IndentCaseBlocks: false",
-        "IndentCaseLabels: true",
-        "ColumnLimit: 120",
-        "IndentRequires: true",
-        "IndentExternBlock: Indent",
-        "IndentGotoLabels: false",
-        "IndentWidth: ${TabSize}",
-        "IndentWrappedFunctionNames: false",
-        "Language: Cpp",
-        "SpacesBeforeTrailingComments: ${TabSize}",
-        "TabWidth: ${TabSize}",
-        "UseTab: Never"
     ],
     "[sourcepawn]": {
         "editor.formatOnSave": false
@@ -654,6 +557,9 @@
     "[valve-cfg]": {
         "editor.formatOnSave": false
     },
+    "[valve-ini]": {
+        "editor.formatOnSave": false
+    },
     "blender.scripts.directories": [
         {
             "path": "/home/andrew/Code/Python/blender/procgen",
@@ -668,9 +574,6 @@
         }
     ],
     "blender.allowModifyExternalPython": true,
-    "[valve-ini]": {
-        "editor.formatOnSave": false
-    },
     // "php.validate.executablePath": "/usr/bin/php",
     "editor.guides.indentation": true,
     "editor.lineHeight": 1.9,
@@ -688,7 +591,65 @@
     "rust-analyzer.inlayHints.reborrowHints.enable": "always",
     "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "skip_trivial",
     "rust-analyzer.checkOnSave.command": "clippy",
-    "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
     "rust-analyzer.inlayHints.bindingModeHints.enable": true,
-    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "with_block"
+    "rust-analyzer.inlayHints.closureReturnTypeHints.enable": "with_block",
+    "rust-analyzer.inlayHints.lifetimeElisionHints.useParameterNames": true,
+    // "python.defaultInterpreterPath": "/home/andrew/bin/blender/blender-3.3.1-linux-x64/3.3/python/bin",
+    "python.analysis.extraPaths": [
+        "/home/andrew/bin/blender/blender-3.3.1-linux-x64/3.3/scripts/modules",
+        "/home/andrew/.local/lib/python3.11/site-packages"
+    ],
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.autoImportUserSymbols": true,
+    "python.analysis.completeFunctionParens": true,
+    "svelte.enable-ts-plugin": true,
+    "svelte.plugin.svelte.note-new-transformation": false,
+    "[javascript]": {
+        "editor.stickyTabStops": false,
+        "editor.useTabStops": true,
+        "editor.tabSize": 4,
+    },
+    "[typescript]": {
+        "editor.stickyTabStops": false,
+        "editor.useTabStops": true,
+        "editor.tabSize": 4,
+    },
+    "[svelte]": {
+        "editor.stickyTabStops": false,
+        "editor.useTabStops": true,
+        "editor.tabSize": 4,
+    },
+    "svelte.plugin.svelte.defaultScriptLanguage": "ts",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "SourcePawnLanguageServer.includesDirectories": [
+        "/home/andrew/sourcemodAPI/addons/sourcemod/scripting/include",
+        "/home/andrew/CSS/cstrike/addons/sourcemod/scripting/include"
+    ],
+    "SourcePawnLanguageServer.spcompPath": "/home/andrew/sourcemodAPI/addons/sourcemod/scripting/spcomp",
+    "leetcode.defaultLanguage": "rust",
+    "leetcode.workspaceFolder": "/home/andrew/Code/personal/leetcode",
+    "leetcode.filePath": {
+        "default": {
+            "folder": "problems",
+            "filename": "${id}.${kebab-case-name}.${ext}"
+        },
+        "python": {
+            "folder": ".new",
+            "filename": "prob_${id}_${snake_case_name}.${ext}",
+        },
+        "rust": {
+            "folder": "problems",
+            "filename": "prob_${id}_${snake_case_name}.${ext}",
+        }
+    },
+    "leetcode.showDescription": "Both",
+    "leetcode.editor.shortcuts": [
+        "description",
+        "submit",
+        "test"
+    ],
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.hint.configWebviewMarkdown": false
 }

@@ -1,0 +1,77 @@
+
+
+# Assigning heredoc to a variable
+#   https://stackoverflow.com/a/1655389
+# Writing heredoc to a file:
+#   https://stackoverflow.com/questions/2953081/how-can-i-write-a-heredoc-to-a-file-in-bash-script
+# Heredocs:
+#   https://tldp.org/LDP/abs/html/here-docs.html
+# Herestrings:
+#   https://tldp.org/LDP/abs/html/x17837.html
+
+# See also: Process Substitution 
+#   https://tldp.org/LDP/abs/html/process-sub.html
+
+
+#@@ HEREDOCS VS HERESTRINGS
+  - Heredocs are blocks of multiline text that allows parameter substitution (when the LIMITSTRING, e.g. EOT, is not quoted or escaped)
+  - Heredocs create temporary files that are deleted afterwards and are only accessible to the current process
+  - Quoting or escaping EOT, like 'EOT' or \EOT, prevents parameter substitution in the text.
+
+Basic Heredoc syntax:
+cat <<EOT
+  Some text, with indentations preserved
+  Parameter substitution is enabled: $1
+EOT
+
+Heredoc syntax with parameter substitution disabled:
+cat <<'EOT'
+  Parameter substitution is disabled: $1
+EOT
+cat <<\EOT
+  Escaping EOT also disables parameter substituion: $1
+EOT
+
+Heredoc syntax - leading tabs ignored (spaces are kept though)
+cat <<-EOT
+    Some text (should be a tab at beginning of this line, not spaces)
+EOT
+
+
+
+
+
+#@@ ASSIGN HEREDOC TO VARIABLE
+
+SOME_VAR=(cat <<EOT
+  Some text here
+EOT
+)
+
+OR
+
+# Ignore indentation
+#   Indentation must be tab characters, not spaces.  Spaces are kept even with <<-
+read -r -d '' SOME_VAR <<-EOF
+    Indentation is ignored.
+EOF
+echo "$SOME_VAR"  # must be enclosed in quotes to preserve newlines
+
+# Preserve indentation in variable
+#   IFS normally contains the tab character, which would remove tabs from the output
+IFS='' read -r -d '' SOME_VAR <<-EOF
+    Indentation is kept.
+EOF
+echo "$SOME_VAR"  # must be enclosed in quotes to preserve newlines and tabs
+
+
+
+
+
+#@@ HERESTRINGS
+# Use herestring with stdin of a loop
+ArrayVar=( element0 element1 element2 {A..D} )
+while read element ; do
+  echo "$element" 1>&2
+done <<< $(echo ${ArrayVar[*]})
+# Outputs: element0 element1 element2 A B C D
