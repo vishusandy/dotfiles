@@ -12,23 +12,15 @@ OPTIONS:
     -q, --quiet     supress backup folder messages
                       this will turn off the summary (enable with -s)
     -r, --replace   transfer all files instead of only updated files
+    -u, --update    transfer only updated files
     -s, --summary   show summary (default)
     -S, --nosummary do not show summary
-    -z              do not set default SELinux security context
-    -Z, --selinux   set default SELinux security context
     -V, --verbose   enable verbose file copy output
     -h, --help      show this help message
 
 
 ARGUMENTS:
     DEST_FOLDER      directory to store the backup in
-
-
-SELINUX
-
-If SELinux is enabled on your system then the -Z flag is assumed.
-This can be disabled with the -z flag.  If SELinux is not enabled
-then the -z flag is assumed.
 
 
 MODIFIED FILES
@@ -78,31 +70,25 @@ quiet=false
 update=true
 verbose=false
 summary=true
-selinux=false
-
-if [[ "$(getenforce 2>/dev/null)" == "Enforcing" ]]; then
-    selinux=true
-fi
 
 # https://stackoverflow.com/questions/11742996/is-mixing-getopts-with-positional-parameters-possible
 script_args=()
 while [ $OPTIND -le "$#" ]; do
-    if getopts :hqrsSVzZ-: option; then
+    if getopts :hqrsSV-: option; then
         case $option in
         h) help ;;
         q) quiet=true ;;
         r) update=false ;;
+        u) update=true ;;
         s) summary=true ;;
         S) summary=false ;;
-        Z) selinux=true ;;
-        z) selinux=false ;;
         V) verbose=true ;;
         -)
             case $OPTARG in
             help) help ;;
             quiet) quiet=true ;;
             replace) update=false ;;
-            selinux) selinux=true ;;
+            update) update=true ;;
             summary) summary=true ;;
             nosummary) summary=false ;;
             verbose) verbose=true ;;
@@ -134,10 +120,9 @@ elif [[ "$num_args" -gt 1 ]]; then
     help
 fi
 
-cp_opts="a"
-if [[ $selinux == true ]]; then cp_opts+="Z"; fi
-if [[ $update == true ]]; then cp_opts+="u"; fi
-if [[ $verbose == true ]]; then cp_opts+="v"; fi
+opts=" -auXE --delete"
+if [[ $update == true ]]; then opts+=" -u"; fi
+if [[ $verbose == true ]]; then opts+=" -v"; fi
 
 BACKUP_BASE="${script_args[0]}"
 
@@ -201,6 +186,7 @@ backup() {
     in_dir=$1
     out_dir=$2
     file=$3
+    extra_opts=$4
 
     # ensure local source directory exists
     if [[ ! -d "$in_dir" ]]; then
@@ -237,25 +223,26 @@ backup() {
         fail_inc && return 14
     fi
 
-    if [ -d "$in_dir$file" ]; then
-        cp_opts+="r"
-    elif [ ! -f "$in_dir$file" ]; then
+    if [ ! -e "$in_dir$file" ]; then
         echo "in_dir=$in_dir file=$file"
         echo "Failed: invalid target: $in_dir$file" >&2
         fail_inc && return 10
     fi
 
     if [[ $quiet == false ]]; then
-        echo "Backing up '$in_dir$file' to '$BACKUP_BASE/$out_dir$file'"
+        echo "'$in_dir$file' -> '$BACKUP_BASE/$out_dir$file'"
     fi
 
     if ! ancestor_check "$in_dir" "$out_dir" "$file"; then
         fail_inc && return $?
     fi
 
-    if ! cp "-$cp_opts" "$in_dir$file" "$BACKUP_BASE/$out_dir$file"; then
+    echo "rsync $opts --progress --delete '$in_dir$file' '$BACKUP_BASE/$out_dir$file'"
+
+    if ! rsync $opts "$in_dir$file" "$BACKUP_BASE/$out_dir$file"; then
         fail_inc && return 1
     fi
+    # fi
 
     success_inc
 }
@@ -283,7 +270,7 @@ summary() {
 
 interrupted() {
     echo ""
-    echo "TRANSER CANCELLED BY USER" >&2
+    echo "TRANSFER CANCELLED BY USER" >&2
     exit 1
 }
 
